@@ -35,7 +35,7 @@ body{
 }
 
 .leftAbout::before{
-    content: url('../../../myapp/public/about-shape2.svg');
+
     position: absolute;
     bottom: 10px;
     left: -18px;
