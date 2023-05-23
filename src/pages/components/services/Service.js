@@ -9,7 +9,7 @@ export default function Service() {
         <div className="servicesLeft flex-1">
           <h4 className="services text-[#08d660] text-[19px]">WHAT WE DO</h4>
           <h1 className="skill text-[28px] font-bold">
-            SERVICES AND SOLUTIONS <span>SOLUTIONS</span>
+            SERVICES AND <span>SOLUTIONS</span>
           </h1>
         </div>
         <div className="esperienceRight flex-1">

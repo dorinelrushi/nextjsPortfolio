@@ -9,7 +9,7 @@ function Prices() {
         <div className="priceseLeft flex-1">
           <h4 className="pricesa text-[#08d660] text-[19px]">WHAT WE DOE</h4>
           <h1 className="prices text-[40px] font-bold">
-            OUR ALL PRICES <span className="text-[#08d660]"> PRICES</span>
+            OUR ALL <span className="text-[#08d660]"> PRICES</span>
           </h1>
         </div>
         <div className="esperienceRight flex-1">

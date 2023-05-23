@@ -8,13 +8,13 @@ function About() {
       className="about header w-[100%]  bg-[#0b0d0c] text-[#ffff]"
       id="about"
     >
-      <div className="aboutflex 2xl:py-[100px] xl:py-[100px] flex  w-[70%]  gap-4 xl:flex-wrap  md:flex-wrap sm:flex-wrap 2sm:flex-wrap m-[auto] justify-center md:py-[80px]">
+      <div className="aboutflex 2xl:py-[100px] xl:py-[100px] flex  w-[70%]  gap-5 xl:flex-wrap  md:flex-wrap sm:flex-wrap 2sm:flex-wrap m-[auto] items-center justify-center md:py-[80px]">
         <div className="leftAbout relative 2xl:flex-1  md:flex-0  sm:flex-0 2sm:flex-0  ">
-          <div className="imagesSticky px-7 relative z-2">
+          <div className="imagesSticky  relative z-2">
             <Image src={video} alt="video" className="images2 relative z-20" />
           </div>
         </div>
-        <div className="rightAbout 2xl:flex-1 md:flex-0 sm:flex-0 2sm:flex-0">
+        <div className="rightAbout 2xl:flex-1 md:flex-0 sm:flex-0 2sm:flex-0 px-[18px]">
           <h2 className="t 2xl:text-[48px]  uppercase font-bold 2xl:leading-[59px] mb-[20px] sm:text-[30px] sm:mt-[50px]">
             FAILURE IS THE CONDIMENT THAT GIVES{" "}
             <span className="s text-[#08d665]">SUCCESS</span>

@@ -24,7 +24,7 @@ function BigHeader() {
           </div>
           <div className="rightSide relative flex-1">
             <Image
-              className="o xl:visible xl:w-[90%] lg:w-[100%] object-cover relative top-5 text-right md:w-[50%] m-auto sm:w-[50%] sm:invisible"
+              className="o xl:visible xl:w-[90%] lg:w-[100%] object-cover relative top-5 text-right md:w-[50%] m-auto sm:w-[50%] sm:invisible 2sm:invisible"
               src={man}
               alt="man"
             />
