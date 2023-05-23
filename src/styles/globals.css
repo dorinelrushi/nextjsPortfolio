@@ -2,26 +2,276 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+body{
+    background-color: #0b0d0c;
+}
+.background{
+    width:100%;
+    background: url('../../public/wlc-bg1.jpg');
+    background-size: cover;
+    background-position: 50% 50%;
+    height: 95vh;
+}
+@media only screen and (max-width:850px){
+    .background {
+        height:59vh;
+     
+    }
+    
+}
+.paragraph{
+   position: relative;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.paragraph::before{
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 3px;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background-color: #08d665;
+}
+
+.leftAbout::before{
+    content: url('../../../myapp/public/about-shape2.svg');
+    position: absolute;
+    bottom: 10px;
+    left: -18px;
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    z-index: 1;
+
+}
+
+.imagesSticky::after{
+    content: "";
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.121);
+    backdrop-filter: blur(10px);
+    position: absolute;
+    z-index: 50;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+}
+
+
+
+@media only screen and (max-width:1080px){
+    .boxflex1{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 25px;
+
+    }
+    .ul{
+        display: none;
+    }
+}
+
+.imagesSticky:hover{
+ cursor: pointer;
+
+}
+
+.imagesSticky::before{
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 51;
+    width: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 0;
+    border-left: 20px solid #fff;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+
+}
+
+@media only screen and (max-width:600px){
+    .imagesSticky::after{
+        content: "";
+        width: 60px;
+        height: 60px;
+        background-color: rgba(255, 255, 255, 0.121);
+        backdrop-filter: blur(10px);
+        position: absolute;
+        z-index: 50;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    
+    }
+    .imagesSticky::before{
+        content: "";
+        display: block;
+        position: absolute;
+        z-index: 51;
+        width: 0;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        height: 0;
+        border-left: 15px solid #fff;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+    
+    }
+}
+
+
+.rightAbout{
+    background-image: linear-gradient(to right top, #0b0d0c, #0f1211);
+    background-size: cover;
+}
+
+.twoBox,.oneBox,.threeBox{
+      position: relative;
+      z-index: 5;
+}
+.oneBox::before{
+    content: "01";
+    color: rgba(174, 174, 174, 0.048);
+    top: -22px;
+    right: 10px;
+    font-weight: bold;
+    font-size: 80px;
+    position: absolute;
+    display: inline-block;
+    z-index: -1;
+}
+
+.twoBox::before{
+    content: "02";
+    color: rgba(174, 174, 174, 0.048);
+    top: -22px;
+    right: 10px;
+    font-weight: bold;
+    font-size: 80px;
+    position: absolute;
+    display: inline-block;
+    z-index: -1;
+}
+
+.threeBox::before{
+    content: "03";
+    color: rgba(174, 174, 174, 0.048);
+    top: -22px;
+    right: 10px;
+    font-weight: bold;
+    font-size: 80px;
+    position: absolute;
+    display: inline-block;
+    z-index: -1;
+}
+
+.scroll-container {
+     width: 70%;
+    margin: auto;
+    display: flex;
+    height: 486px;
+    scroll-behavior: smooth;
+    gap: 29px;
+    overflow: hidden;
+    scroll-snap-type: x mandatory;
+
   }
+
+  .scroll-area {
+    scroll-snap-align: center;
+    min-width: 380px;
+    font-size: 60px;
+    height:400px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .5s ease;
+  }
+
+
+
+
+.scroll-area:nth-child(1){
+    background: url('https://cdn.dribbble.com/users/25514/screenshots/16830434/media/eb88a2f70160783e37cd6b1cda91c869.png?compress=1&resize=1000x750&vertical=top');
+    background-size: cover;
+    background-position: 50% 50% ;
+    position: relative;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+
+
+
+.scroll-area:nth-child(2){
+    background: url('https://cdn.dribbble.com/userupload/4360371/file/original-0ec58ddf7c6cd0fc35129697c75a2d9b.png?compress=1&resize=1024x768');
+    background-size: cover;
+    position: relative;
+   
+}
+
+.scroll-area:nth-child(3){
+    background: url('https://cdn.dribbble.com/users/746931/screenshots/16077352/media/f0c55523532cce82e947519d55ba46a3.png?compress=1&resize=1000x750&vertical=top');
+    background-size: cover;
+    background-position: 50% 50% ;
+    position: relative;
+}
+
+.scroll-area:nth-child(4){
+    background: url('https://cdn.dribbble.com/userupload/2992148/file/original-90cd61eda2802c1294dd87df8d471afe.png?compress=1&resize=1024x768');
+    background-size: cover;
+    position: relative;
+}
+.scroll-area:nth-child(5){
+    background: url('https://cdn.dribbble.com/userupload/4395166/file/original-65c13fd4009c8a6f9418c058b2a57c07.png?compress=1&resize=1024x768');
+    background-size: cover;
+    position: relative;
+}
+
+
+.hovers{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color:#08d665;
+    display: none;
+    position: absolute;
+   opacity: 0;
+   font-weight: bold;
+   transition:all 1.5s ease;
+  
+   
+}
+.scroll-area:hover .hovers{
+    display: block;
+    opacity: 1;
+    transition:all 1.5s ease;
+}
+
+.news{
+    width: 100%;
+    background: url('../../public/map-1\ \(1\).png');
+    opacity: 1;
+    background-size: cover;
+    background-position: 10% 10%;
+    position: relative;
+}
+
+.news::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #0b0d0c71;
+    position: absolute;
+
 }
